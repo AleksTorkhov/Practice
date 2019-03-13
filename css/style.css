@@ -29,6 +29,12 @@ a {
   border: none;
 }
 
+.button:hover,
+.button:focus,
+.button:active {
+  background-color: #663d15;
+}
+
 .main-navigation {
   font-size: 16px;
   line-height: 20px;
@@ -90,4 +96,14 @@ a {
 .gallery-content {
   background-color: #cccccc;
   border: 7px solid #ffffff;
+}
+
+.appointment-item input {
+  font: inherit;
+  background-color: transparent;
+  border: 2px solid #000000;
+}
+
+.appointment-item input:focus {
+  border-color: #663d15;
 }
