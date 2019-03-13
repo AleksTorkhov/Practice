@@ -55,3 +55,29 @@ a {
   font-size: 30px;
   line-height: 42px;
 }
+
+.index-columns {
+  color: #000000;
+  background-color: #f8f5f2;
+  background-image: url("../img/pattern-light.jpg");
+  background-position: 0 0;
+  background-repeat: repeat;
+}
+
+.index-columns h2 {
+  font-size: 30px;
+  line-height: 42px;
+}
+
+.news-list {
+  list-style: none;
+}
+
+.news-item time {
+  text-transform: none;
+}
+
+.gallery-content {
+  background-color: #cccccc;
+  border: 7px solid #ffffff;
+}
