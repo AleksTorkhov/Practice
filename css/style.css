@@ -116,6 +116,11 @@ a {
   border-color: #663d15;
 }
 
+.page-title {
+  font-size: 30px;
+  line-height: 42px;
+}
+
 .main-footer {
   color: #ffffff;
   background-color: #212121;
