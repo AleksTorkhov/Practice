@@ -107,10 +107,16 @@ a {
 }
 
 .features-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
 .feature-item {
+  width: 300px;
   text-align: center;
 }
 
