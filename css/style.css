@@ -60,7 +60,6 @@ a {
   font-size: 16px;
   line-height: 20px;
   color: #ffffff;
-  background-color: #000000;
 }
 
 .main-header-logo {
@@ -106,6 +105,10 @@ a {
   background-color: #242424;
 }
 
+.features {
+  margin-bottom: 80px;
+}
+
 .features-list {
   display: flex;
   justify-content: space-between;
@@ -126,6 +129,11 @@ a {
 }
 
 .index-columns {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 35px;
+  padding: 50px 80px;
+
   color: #000000;
   background-color: #f8f5f2;
   background-image: url("../img/pattern-light.jpg");
@@ -138,12 +146,22 @@ a {
   line-height: 42px;
 }
 
+.news,
+.contacts {
+  width: 380px;
+}
+
 .news-list {
   list-style: none;
 }
 
 .news-item time {
   text-transform: none;
+}
+
+.gallery,
+.appointment {
+  width: 300px;
 }
 
 .gallery-content {
