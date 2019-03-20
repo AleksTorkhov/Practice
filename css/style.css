@@ -117,14 +117,14 @@ a {
 }
 
 .site-navigation a,
-.user-navigation a{
+.user-navigation a {
   color: #ffffff;
 }
 
-.site-navigation:hover,
-.site-navigation:focus,
-.user-navigation:hover,
-.user-navigation:focus {
+.site-navigation a:hover,
+.site-navigation a:focus,
+.user-navigation a:hover,
+.user-navigation a:focus {
   background-color: #242424;
 }
 
