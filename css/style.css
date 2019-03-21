@@ -15,16 +15,39 @@ body {
   background-repeat: no-repeat;
 }
 
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.vissually-hidden:not(:focus):not(:active),
+input[type="checkbox"].vissually-hidden,
+input[type="radio"].vissually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  -webkit-clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .inner-page {
   color: #000000;
   background-color: #f9f6f3;
   background-image: url("../img/pattern-light.jpg");
   background-position: 0 0;
   background-repeat: repeat;
-}
-
-a {
-  text-decoration: none;
 }
 
 .button {
