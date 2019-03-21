@@ -24,9 +24,9 @@ img {
   height: auto;
 }
 
-.vissually-hidden:not(:focus):not(:active),
-input[type="checkbox"].vissually-hidden,
-input[type="radio"].vissually-hidden {
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
   position: absolute;
 
   width: 1px;
@@ -37,7 +37,7 @@ input[type="radio"].vissually-hidden {
 
   white-space: nowrap;
 
-  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
