@@ -206,8 +206,33 @@ input[type="radio"].visually-hidden {
 }
 
 .feature-item h3 {
+  position: relative;
+
+  margin: 0;
+  margin-bottom: 60px;
+
   font-size: 30px;
   line-height: 42px;
+}
+
+.feature-item h3:after {
+  content: "";
+
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+
+  width: 20px;
+  height: 20px;
+  margin-left: -10px;
+
+  background-color: #ffffff;
+
+  transform: rotate(-45deg);
+}
+
+.feature-item p {
+  margin: 0 10px;
 }
 
 .index-columns {
@@ -218,12 +243,17 @@ input[type="radio"].visually-hidden {
 
   color: #000000;
   background-color: #f8f5f2;
-  background-image: url("../img/pattern-light.jpg");
-  background-position: 0 0;
-  background-repeat: repeat;
+  background-image:
+    url("../img/line.png"),
+    url("../img/pattern-light.jpg");
+  background-position: center, 0 0;
+  background-repeat: no-repeat, repeat;
 }
 
 .index-columns h2 {
+  margin: 0;
+  margin-bottom: 25px;
+
   font-size: 30px;
   line-height: 42px;
 }
@@ -234,7 +264,19 @@ input[type="radio"].visually-hidden {
 }
 
 .news-list {
+  margin: 0;
+  margin-bottom: 25px;
+  padding: 0;
+
   list-style: none;
+}
+
+.news-item {
+  margin-bottom: 25px;
+}
+
+.news-item p {
+  margin: 0;
 }
 
 .news-item time {
