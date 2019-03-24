@@ -1,4 +1,5 @@
 body {
+  min-width: 960px;
   margin: 0;
   padding: 0;
 
@@ -394,10 +395,38 @@ input[type="radio"].visually-hidden {
 }
 
 .breadcrumbs {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
   margin: 0;
   margin-bottom: 50px;
   padding: 0;
+
   list-style: none;
+}
+
+.breadcrumbs li {
+  position: relative;
+  margin-right: 42px;
+}
+
+.breadcrumbs li:last-child {
+  margin-right: 0;
+}
+
+.breadcrumbs li::after {
+  content: "";
+
+  position: absolute;
+  top: 7px;
+  right: -25px;
+
+  width: 8px;
+  height: 8px;
+
+  background-color: #000000;
+
+  transform: rotate(45deg);
 }
 
 .breadcrumbs a {
@@ -411,6 +440,10 @@ input[type="radio"].visually-hidden {
 
 .breadcrumbs-current {
   color: #aba9a7;
+}
+
+.breadcrumbs-current {
+  display: none;
 }
 
 .catalog-columns {
