@@ -1073,6 +1073,10 @@ input[type="radio"].visually-hidden {
   box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
 }
 
+.modal-show {
+  display: block;
+}
+
 .modal-login {
   top: 120px;
   left: 50%;
