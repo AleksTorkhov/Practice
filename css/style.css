@@ -531,7 +531,7 @@ input[type="radio"].visually-hidden {
   border: 2px solid #000000;
 }
 
-.filter-input-checkbox + label::after {
+.filter-input-checkbox:checked + label::after {
   content: "";
   position: absolute;
   top: 4px;
@@ -1309,3 +1309,7 @@ input[type="radio"].visually-hidden {
 
   border: none;
 }
+
+/* Bounce reverse
+  Задний фон и закрытие модального окна с помощью него
+   */
