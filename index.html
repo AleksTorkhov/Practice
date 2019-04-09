@@ -93,7 +93,7 @@
             пн—пт: с 10:00 до 22:00<br>
             сб—вс: с 10:00 до 19:00
           </p>
-          <a class="button" href="map.html">Как проехать</a>
+          <a class="button js-button-map" href="map.html">Как проехать</a>
           <a class="button" href="contacts.html">Обратная связь</a>
         </section>
 
@@ -128,7 +128,7 @@
         <p class="footer-contacts">
           Барбершоп «Бородинский»<br>
           Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
-          <a href="map.html">Как нас найти?</a><br>
+          <a href="map.html" class="js-button-map">Как нас найти?</a><br>
           Телефон: +7 (812) 666-02-66
         </p>
         <div class="footer-social">
@@ -219,7 +219,12 @@
 
       link.addEventListener("click", function(evt) {
         evt.preventDefault();
-        popup.classList.add("modal-show");
+        if (popup.classList.contains("modal-show")) {
+          popup.classList.remove("modal-show");
+          popup.classList.remove("modal-error");
+        } else {
+          popup.classList.add("modal-show");
+        }
         if (storage) {
           login.value = storage;
           password.focus();
@@ -231,12 +236,13 @@
       close.addEventListener("click", function(evt) {
         evt.preventDefault();
         popup.classList.remove("modal-show");
+        popup.classList.remove("modal-error");
       });
 
       form.addEventListener("submit", function (evt) {
-        evt.preventDefault();
         if (!login.value || !password.value) {
-          console.log("Нужно вести логин и пароль");
+          evt.preventDefault();
+          popup.classList.add("modal-error");
         } else {
           if (isStorageSupport) {
             localStorage.setItem("login", login.value);
@@ -249,9 +255,35 @@
           evt.preventDefault ();
           if (popup.classList.contains("modal-show")) {
             popup.classList.remove("modal-show");
+            popup.classList.remove("modal-error");
           }
         }
       });
+
+      var mapLink = document.querySelector(".js-button-map");
+      var mapPopup = document.querySelector(".modal-map");
+      var mapClose = mapPopup.querySelector(".modal-close");
+
+      mapLink.addEventListener("click", function(evt) {
+        evt.preventDefault();
+        if (mapPopup.classList.contains("modal-show")) {
+          mapPopup.classList.remove("modal-show");
+        } else {
+          mapPopup.classList.add("modal-show");
+        }
+        if (storage) {
+          login.value = storage;
+          password.focus();
+        } else {
+          login.focus();
+        }
+      });
+
+      mapClose.addEventListener("click", function(evt) {
+        evt.preventDefault();
+        mapPopup.classList.remove("modal-show");
+      });
+
     </script>
 
   </body>
